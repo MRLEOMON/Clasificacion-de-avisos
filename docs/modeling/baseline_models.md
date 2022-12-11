@@ -4,9 +4,7 @@
 
 El problema que se trata de resolver, se refiere a que se presenta un alto número de eventos que se registran en un sistema de gestión de mantenimiento de una serie de estaciones de bombeo de petróleo, lo que implica una alta carga de trabajo para el equipo encargado de clasificarlos de manera manual.  Debido al gran volumen de eventos que se registran en el sistema, el equipo de ingenieros dedica una gran cantidad de tiempo a revisar y clasificar cada uno de ellos, lo que genera costos anuales significativos.  Esta tarea se realiza de manera manual, lo que hace que sea tediosa y poco eficiente.  El objetivo de este documento es presentar una solución que permita automatizar el proceso de clasificación de eventos en el sistema de gestión de mantenimiento, con el fin de reducir los costos y aumentar la eficiencia del equipo de ingenieros.  Se propone utilizar técnicas de procesamiento de lenguaje natural para identificar palabras clave en los eventos registrados en el sistema y asignarles automáticamente la categoría correspondiente.  Con esta solución se espera reducir el tiempo que se dedica a la clasificación de eventos de manera manual, lo que permitirá al equipo de ingenieros dedicar su tiempo a tareas más productivas y aumentar la eficiencia del sistema en general.
 
-## DESCRIPCIÓN DEL MODELO DE REFERENCIA
-
-## Enfoque analítico
+## DESCRIPCIÓN DEL MODELO DE REFERENCIA - ENFOQUE ANALÍTICO
 
 ### Cuál es la definición del objetivo
 
@@ -128,27 +126,20 @@ Finalmente como recomendación podemos decir que es importante estar actualizand
 
 El modelo base es el modelo que un científico de datos entrenaría y evaluaría rápidamente después de tener el primer conjunto de características (preliminares) listo para el modelado de aprendizaje automático. A través de la construcción del modelo de referencia, el científico de datos puede tener una evaluación rápida de la viabilidad de la tarea de aprendizaje automático.
 
-
- 
-
-
-
-
-
-
-
-## Comprensión del modelo
-
-* Importancia de las variables (importancia)
-
-
-
 ## Conclusión y debates para los próximos pasos
 
-* Conclusión sobre la evaluación de la viabilidad de la tarea de aprendizaje automático
+### Conclusión sobre la evaluación de la viabilidad de la tarea de aprendizaje automático
 
-* Debate sobre el sobreajuste (si procede)
+La evaluación de la viabilidad de la tarea de aprendizaje automático ha demostrado que es factible utilizar técnicas de procesamiento de lenguaje natural y bolsas de palabras para construir un modelo de clasificación capaz de determinar automáticamente la categoría a la que pertenece un evento registrado en el sistema de gestión de mantenimiento.
 
-* ¿Qué otras características pueden generarse a partir de los datos actuales?
+El modelo construido ha demostrado una alta precisión y eficiencia en la clasificación de eventos, lo que puede ayudar a mejorar la productividad eficiencia y eficacia del equipo de ingenieros y dedicar su tiempo a tareas más productivas y a sacar mas provecho de la información del sistema de gestión de mantenimiento.
 
-* Qué otras fuentes de datos relevantes están disponibles para ayudar al modelado
+En resumen, la tarea de aprendizaje automático es viable y puede ser utilizada con éxito en el proceso de clasificación de eventos en el sistema de gestión de mantenimiento.
+
+### ¿Qué otras características pueden generarse a partir de los datos actuales?
+
+Hay otras características que se pueden generar a partir de los datos actuales. Una posible opción es utilizar embeddings de palabras pre-entrenados en un corpus grande de texto, como word2vec o GloVe. Estos embeddings representan a cada palabra en un espacio vectorial de alta dimensión, de manera que palabras que tienen significados similares quedan cercanas en el espacio vectorial. De esta manera, se pueden obtener representaciones densas y ricas del texto, que pueden ser utilizadas como entradas para el clasificador.
+
+Otra opción es utilizar técnicas de extracción de características de n-gramas, que consiste en generar características basadas en conjuntos de n palabras consecutivas del texto. Por ejemplo, si se utilizan n-gramas de 2 palabras (bigramas), y el texto es "Falla Sensor de vibración incrementador unidad 9450", se obtendrían las siguientes características: "Falla Sensor", "Sensor de", "de vibración", "vibración incrementador", "incrementador unidad", "unidad 9450". De esta manera, se pueden capturar patrones más complejos en el texto que no se pueden detectar con la bolsa de palabras o TF-IDF solos.
+
+### Qué otras fuentes de datos relevantes están disponibles para ayudar al modelado
