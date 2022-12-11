@@ -66,6 +66,14 @@ Una vez generadas las bolsas de palabras, se implementa un clasificador que reci
 
 ### ¿Qué tipo de modelo se ha construido?
 
+El modelo propuesto en este proyecto es un clasificador que utiliza técnicas de procesamiento de lenguaje natural (NLP) para automatizar el proceso de clasificación de eventos del sistema de gestión de mantenimiento. El modelo se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación.
+
+En la primera etapa, se extraen los datos de SAP y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+
+Finalmente, en la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla. La salida del modelo es la categoría asignada automáticamente al evento.
+
+En resumen, el modelo construido es un clasificador que utiliza técnicas de procesamiento de lenguaje natural y bolsas de palabras para determinar automáticamente la categoría a la que pertenece un evento registrado en el sistema de gestión de mantenimiento.
+
 ## Descripción del modelo
 
 * Modelos y parámetros
