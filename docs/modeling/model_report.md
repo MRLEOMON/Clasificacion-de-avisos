@@ -29,8 +29,43 @@ Finalmente, en la etapa de clasificación, se implementa un clasificador que uti
 En resumen, el modelo es un clasificador que utiliza técnicas de NLP y bolsas de palabras para determinar automáticamente la categoría de un evento en el sistema de gestión de mantenimiento.
 
 ## Descripción de la solución
-* Arquitectura simple de la solución (fuentes de datos, componentes de la solución, flujo de datos)
-* ¿Cuál es la salida?
+
+### Arquitectura simple de la solución
+
+La arquitectura simple del modelo de clasificación construido en este proyecto se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación.
+
+En la primera etapa, los datos se extraen de SAP y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+
+En la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla. La salida del modelo es la categoría asignada automáticamente al evento.
+
+En resumen, la arquitectura simple del modelo construido es la siguiente:
+
+Extracción de datos: se extraen los datos de SAP y se exportan a un dataset en formato excel.
+Pre-procesamiento: se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+Clasificación: se implementa un clasificador que utiliza las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para determinar la categoría del evento. La salida del modelo es la categoría asignada automáticamente al evento.
+
+#### Fuentes de datos
+
+En este proyecto, la fuente de datos es el sistema de gestión de mantenimiento SAP. Los datos se extraen de SAP y se exportan a un dataset en formato excel para su procesamiento.
+
+#### Componentes de la solución
+
+**1. Diccionario para corregir palabras mal escritas**: se utiliza para autocompletar y estandarizar las palabras en el campo "Descripción del aviso" y "Texto explicativo".
+**2. Bolsa de palabras**: se utiliza para generar las características de entrada del clasificador.
+**3. Clasificador**: se implementa un clasificador que utiliza las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para determinar la categoría del evento.
+**4. Dataset**: se utiliza para almacenar los datos extraídos de SAP y luego procesarlos.
+**5. Lógica de Pre-procesamiento**: se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+
+#### Flujo de datos
+
+**1.** Los datos se extraen de SAP y se exportan a un dataset en formato excel.
+**2.** Se realiza un pre-procesamiento del texto en el dataset, que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+**3.** Se generan las características de entrada del clasificador utilizando la bolsa de palabras.
+**4.** El clasificador utiliza las características generadas en la etapa de pre-procesamiento como entradas para determinar la categoría del evento.
+
+### ¿Cuál es la salida?
+
+La salida del modelo es la categoría asignada automáticamente al evento.
 
 ## Datos
 * Fuente
