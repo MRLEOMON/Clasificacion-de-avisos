@@ -35,23 +35,28 @@ Los datos se ingresarán al servidor de manera manual a través de un archivo en
 
 ## 2. IMPLEMENTACIÓN DEL MODELO EN EL ENTORNO DE DESPLIEGUE
 
-Para implementar este modelo en el entorno de despliegue, sigue los siguientes pasos:
+Para implementar este modelo en el entorno de despliegue, sigua los siguientes pasos:
 
-a. Clona el repositorio con el comando:
+a. Clone el repositorio con el comando:
 $ git clone https://github.com/MRLEOMON/Clasificacion_Avisos
 
-b. Instala los paquetes necesarios con el comando:
+b. Instale los paquetes necesarios con el comando:
 $ poetry install
 
-c. Ejecuta el script de entrenamiento y evaluación del modelo con el comando:
-$ python train.py
-
-
-c. Ejecuta el script de clasificación con el comando:
+c. Ejecute el script de clasificación con el comando:
 $ python clasify.py <input_file> <output_file>
 
 donde `<input_file>` es el archivo de entrada con los datos a clasificar y `<output_file>` es el archivo de salida donde se guardarán la clasificación de fallas predicciones del modelo.
 
+## 3. MONITOREO Y MANTENIMIENTO DEL MODELO
+
+Para monitorear el proyecto de clasificación de avisos una vez que esté en producción, se revisará periódicamente la carpeta 'logs' donde se almacenarán los archivos de errores generados por el programa.
+
+Cada vez que el modelo presente un error, se generará un archivo con la fecha y hora del evento en el nombre y en el contenido del archivo se encontrará información detallada sobre la función que generó el error.
+
+Para solucionar los errores detectados, se deberá analizar la información del archivo de error y corregir el código según sea necesario.
+
+Además, se llevará a cabo un mantenimiento regular del modelo para asegurarnos de que sigue funcionando correctamente. Esto incluirá la actualización del código, la actualización de los archivos de bolsas de palabras y el reentrenamiento del modelo con datos más recientes para asegurarnos de que sigue siendo preciso.
 
 --
 
