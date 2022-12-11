@@ -86,14 +86,19 @@ En el proyecto, se implementaron diferentes modelos de clasificación para evalu
 | Linear Support Vector Classification | TF-IDF| 93,7% |
 | Pipeline | TF-IDF | 93,4% | 
 
-De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo Linear Support Vector Classification con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy de 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos.  Esto se debe a que Linear Support Vector Classification es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
-
-Sin embargo, dado que se cuentan con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador mientras se obtienen mas datos de entrenamiento para el modelo y así para aumentar su precisión.
-
 MATRIZ DE DESEMPEÑO DEL MODELO CON MEJOR DESEMPEÑO
 
-![image](https://user-images.githubusercontent.com/109122368/206931801-b71fb00a-c0ab-40a0-b49a-a8537c325b33.png)
+De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo Linear Support Vector Classification con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy de 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos.  Esto se debe a que Linear Support Vector Classification es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
 
+![image](https://user-images.githubusercontent.com/109122368/206931851-bf2e9584-7d74-43ba-a731-ca3b45c1f360.png)
+
+![image](https://user-images.githubusercontent.com/109122368/206931866-4a6ae93a-be72-435a-a925-3f07df12ac56.png)
+
+Vemos que con este modelo se obtuvo un excelente desempeño, a continuación las métricas de desempeño:
+
+![image](https://user-images.githubusercontent.com/109122368/206931948-1c961ce5-c360-4a1a-a992-4e0bf2377b58.png)
+
+Sin embargo, dado que se cuentan con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador mientras se obtienen mas datos de entrenamiento para el modelo y así para aumentar su precisión.
 
 ## CONCLUSIONES
 
