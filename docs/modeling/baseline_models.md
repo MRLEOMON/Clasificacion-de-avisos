@@ -10,7 +10,15 @@ El modelo de referencia propuesto en este proyecto se basa en el uso de técnica
 
 El modelo se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos de SAP y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
 
-Finalmente, en la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla. El modelo se ejecuta de manera automática y permite clasificar los eventos de manera rápida y precisa, lo que reduce el tiempo y los costos asociados al proceso manual actual.
+Finalmente, en la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla.
+
+![image](https://user-images.githubusercontent.com/109122368/206909852-7483bfac-8ff7-4186-b4c3-eea68ab81627.png)
+
+El modelo se ejecuta de manera automática y permite clasificar los eventos de manera rápida y precisa, lo que reduce el tiempo y los costos asociados al proceso manual actual.
+
+## RESULTADOS OBTENIDOS
+
+
 
 
 4.	Resultados obtenidos: en esta sección debes presentar los resultados obtenidos al evaluar el modelo de referencia en tus datos. Debes incluir información sobre las métricas utilizadas para evaluar el rendimiento del modelo, así como un análisis detallado de los resultados obtenidos y cómo se comparan con los resultados previamente reportados en la literatura.
