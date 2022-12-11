@@ -58,6 +58,14 @@ Para solucionar los errores detectados, se deberá analizar la información del 
 
 Además, se llevará a cabo un mantenimiento regular del modelo para asegurarnos de que sigue funcionando correctamente. Esto incluirá la actualización del código, la actualización de los archivos de bolsas de palabras y el reentrenamiento del modelo con datos más recientes para asegurarnos de que sigue siendo preciso.
 
+## 4. INFORMACIÓN DE CONTACTO Y PREGUNTAS FRECUENTES
+
+Si tiene problemas al implementar el modelo de ciencia de datos, puedes ponerte en contacto con Edwin Yecid González Gómez <ingeniero.ed@gmail.com> o con Leonardo Fabio Montenegro Torres <leonardofa.montenegro@gmail.com> para obtener ayuda.
+
+Además, se elaborará un documento de de preguntas frecuentes el cual se irá actualizanco con respuestas a preguntas comunes que surjan durante la implementación del proyecto.
+
+En resumen, si tiene problemas al implementar el modelo de ciencia de datos, puede ponerte en contacto con nosotros o consultar el documento de preguntas frecuentes para obtener ayuda.
+
 --
 
 En esta carpeta puedes añadir la documentación de despliegue, incluyendo
