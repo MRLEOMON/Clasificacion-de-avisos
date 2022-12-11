@@ -65,12 +65,3 @@ Si tiene problemas al implementar el modelo de ciencia de datos, puedes ponerte 
 Además, se elaborará un documento de de preguntas frecuentes el cual se irá actualizanco con respuestas a preguntas comunes que surjan durante la implementación del proyecto.
 
 En resumen, si tiene problemas al implementar el modelo de ciencia de datos, puede ponerte en contacto con nosotros o consultar el documento de preguntas frecuentes para obtener ayuda.
-
---
-
-En esta carpeta puedes añadir la documentación de despliegue, incluyendo
-
-* Documentación de las APIs (por ejemplo, swagger).
-* Documentación de los paquetes (por ejemplo, sphinx).
-* Documentación del panel de control.
-* Cualquier otra documentación dependiendo del tipo de despliegue.
