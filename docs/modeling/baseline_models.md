@@ -84,7 +84,7 @@ En el proyecto, se implementaron diferentes modelos de clasificación para evalu
 | Linear Support Vector Classification | TF-IDF| 93,7% |
 | Pipeline | TF-IDF | 93,4% | 
 
-** Matriz de desempeño del mejor modelo **
+**Matriz de desempeño del mejor modelo**
 
 De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo Linear Support Vector Classification con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy de 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos.  Esto se debe a que Linear Support Vector Classification es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
 
