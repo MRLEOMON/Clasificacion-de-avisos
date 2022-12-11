@@ -26,17 +26,14 @@ El software previo a la instalación del repositorio se detalla a continuación:
 
 - Sistema operativo Linux distribución Debian versión 1.13 
 
-Python versión 3.9.2 como lenguaje de programación y las siguentes bibliotecas especializadas:
-
--  
-- Numpy
-- Pandas
-- Curl
-
-También se utilizará curl para descargar los datos y poetry para gestionar las dependencias del proyecto.
+- Python versión 3.9.2 como lenguaje de programación.
+- Curl para descargar los datos y poetry para gestionar las dependencias del proyecto.
 
 Los datos se ingresarán al servidor de manera manual a través de un archivo en formato Excel que se pondrá en la carpeta 'data' del proyecto. Se actualizará semanalmente y se utilizará para entrenar y evaluar el modelo.
 
+1.3 GESTIÓN DE DATOS USADOS POR EL MODELO
+
+Los datos se ingresarán al servidor de manera manual a través de un archivo en formato Excel que se pondrá en la carpeta 'data' del proyecto. Se agregarán datos  semanalmente con información descargada de el ERP SAP y estos datos serán los que utilizará el modelo para realizar la clasificación de las fallas.
 
 --
 
