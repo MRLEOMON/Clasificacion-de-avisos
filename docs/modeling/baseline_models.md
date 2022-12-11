@@ -6,51 +6,6 @@ El problema que se trata de resolver, se refiere a que se presenta un alto núme
 
 ## DESCRIPCIÓN DEL MODELO DE REFERENCIA
 
-El modelo de referencia propuesto en este proyecto se basa en el uso de técnicas de procesamiento de lenguaje natural (NLP) para clasificar automáticamente los eventos registrados en el sistema de gestión de mantenimiento de una estación de bombeo de petróleo.
-
-El modelo se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos de SAP y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
-
-Finalmente, en la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla.
-
-![image](https://user-images.githubusercontent.com/109122368/206909852-7483bfac-8ff7-4186-b4c3-eea68ab81627.png)
-
-El modelo se ejecuta de manera automática y permite clasificar los eventos de manera rápida y precisa, lo que reduce el tiempo y los costos asociados al proceso manual actual.
-
-## RESULTADOS OBTENIDOS
-
-En el proyecto, se implementaron diferentes modelos de clasificación para evaluar su eficacia en el proceso de clasificación de eventos en el sistema de gestión de mantenimiento. Estos modelos incluyen Multinomial Naive Bayes, Logistic Regression classifier, Support Vector Classification, Linear Support Vector Classification y Pipelines.
-
-| CLASIFICADOR | REPRESENTACIÓN DE TEXTO | ACCURACY |
-| --- | --- | --- | 
-| Multinomial Naive Bayes | BoW | 87,4% |
-| Multinomial Naive Bayes | TF-IDF| 83,0% |
-| Logistic Regression classifier | BoW | 93,5% |
-| Logistic Regression classifier | TF-IDF| 93,2% |
-| Support Vector Classification | BoW | 82,5% |
-| Support Vector Classification | TF-IDF|82,5% |
-| ***Linear Support Vector Classification*** | ***BoW*** | ***93,8%*** |
-| Linear Support Vector Classification | TF-IDF| 93,7% |
-| Pipeline | TF-IDF | 93,4% | 
-
-De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo Linear Support Vector Classification con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy de 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos.  Esto se debe a que Linear Support Vector Classification es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
-
-Sin embargo, dado que se cuentan con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador mientras se obtienen mas datos de entrenamiento para el modelo y así para aumentar su precisión.
-
-## CONCLUSIONES
-
-Como conclusiones se puede decir que una de las claves de éxito de este modelo está en generar adecuadamente las bolsas de palabras y hacer un correcto preprocesamiento de la información. Los autocorrectores son importantes ya que nos permiten tener las palabras correctas y de esta manera agrupar conjuntos de texto exactos ya que como se pudo apreciar, existen muchos errores ortográficos en la redacción de los textos.
-
-Otro aspecto importante es realizar los pasos correctos del diagrama de flujo para colocar las etiquetas, esto se debe a que existe un orden lógico propio para este tipo de textos y que son puntuales de la industria del Oil&Gas, si se comete un error o se hacen pasos invertidos, el resultado puede variar considerablemente.
-
-En cuanto a los modelos se puede apreciar que el clasificador Linear Support Vector Classification ***(LinearSVC)*** obtuvo el mejor resultado. Esto se debe a que las máquinas de soporte vectorial permiten encontrar la forma óptima de clasificar varias clases. La clasificación óptima se realiza maximizando el margen de separación entre las clases y los vectores que definen el borde de esta separación son los vectores de soporte.
-
-Finalmente como recomendación podemos decir que es importante estar actualizando constantemente las bolsas de palabras y los autocorrectores con el lenguaje propio de esta industria para poder tener textos con mayor calidad que le permita al modelo realizar una clasificación adecuada.
-
-------------------------
-
-El modelo base es el modelo que un científico de datos entrenaría y evaluaría rápidamente después de tener el primer conjunto de características (preliminares) listo para el modelado de aprendizaje automático. A través de la construcción del modelo de referencia, el científico de datos puede tener una evaluación rápida de la viabilidad de la tarea de aprendizaje automático.
-
-
 ## Enfoque analítico
 
 ### Cuál es la definición del objetivo
@@ -112,7 +67,58 @@ c. Para el proceso de entrenamiento, vamos a evaluar distintos tipos de represen
 
 En todos los casos, se utilizará validación cruzada (**hold out cross-validation**) para validar el modelo, por lo que dividiremos el conjunto de datos en **70%** para entrenamiento y **30%** para prueba. Se usará un parámetro ``random_state=0`` para inicializar una semilla para asegurarnos que todos obtengamos los mismos resultados. 
 
-Las variables que le pasaremos a nuestros clasificadores para entrenar y validar los modelos son las siguientes: **X_train**, **X_test**, **y_train**, **y_test** 
+Las variables que le pasaremos a nuestros clasificadores para entrenar y validar los modelos son las siguientes: **X_train**, **X_test**, **y_train**, **y_test**
+
+--------------------------
+
+El modelo de referencia propuesto en este proyecto se basa en el uso de técnicas de procesamiento de lenguaje natural (NLP) para clasificar automáticamente los eventos registrados en el sistema de gestión de mantenimiento de una estación de bombeo de petróleo.
+
+El modelo se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos de SAP y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+
+Finalmente, en la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla.
+
+![image](https://user-images.githubusercontent.com/109122368/206909852-7483bfac-8ff7-4186-b4c3-eea68ab81627.png)
+
+El modelo se ejecuta de manera automática y permite clasificar los eventos de manera rápida y precisa, lo que reduce el tiempo y los costos asociados al proceso manual actual.
+
+------------------------------
+
+## RESULTADOS OBTENIDOS
+
+En el proyecto, se implementaron diferentes modelos de clasificación para evaluar su eficacia en el proceso de clasificación de eventos en el sistema de gestión de mantenimiento. Estos modelos incluyen Multinomial Naive Bayes, Logistic Regression classifier, Support Vector Classification, Linear Support Vector Classification y Pipelines.
+
+| CLASIFICADOR | REPRESENTACIÓN DE TEXTO | ACCURACY |
+| --- | --- | --- | 
+| Multinomial Naive Bayes | BoW | 87,4% |
+| Multinomial Naive Bayes | TF-IDF| 83,0% |
+| Logistic Regression classifier | BoW | 93,5% |
+| Logistic Regression classifier | TF-IDF| 93,2% |
+| Support Vector Classification | BoW | 82,5% |
+| Support Vector Classification | TF-IDF|82,5% |
+| ***Linear Support Vector Classification*** | ***BoW*** | ***93,8%*** |
+| Linear Support Vector Classification | TF-IDF| 93,7% |
+| Pipeline | TF-IDF | 93,4% | 
+
+De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo Linear Support Vector Classification con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy de 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos.  Esto se debe a que Linear Support Vector Classification es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
+
+Sin embargo, dado que se cuentan con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador mientras se obtienen mas datos de entrenamiento para el modelo y así para aumentar su precisión.
+
+## CONCLUSIONES
+
+Como conclusiones se puede decir que una de las claves de éxito de este modelo está en generar adecuadamente las bolsas de palabras y hacer un correcto preprocesamiento de la información. Los autocorrectores son importantes ya que nos permiten tener las palabras correctas y de esta manera agrupar conjuntos de texto exactos ya que como se pudo apreciar, existen muchos errores ortográficos en la redacción de los textos.
+
+Otro aspecto importante es realizar los pasos correctos del diagrama de flujo para colocar las etiquetas, esto se debe a que existe un orden lógico propio para este tipo de textos y que son puntuales de la industria del Oil&Gas, si se comete un error o se hacen pasos invertidos, el resultado puede variar considerablemente.
+
+En cuanto a los modelos se puede apreciar que el clasificador Linear Support Vector Classification ***(LinearSVC)*** obtuvo el mejor resultado. Esto se debe a que las máquinas de soporte vectorial permiten encontrar la forma óptima de clasificar varias clases. La clasificación óptima se realiza maximizando el margen de separación entre las clases y los vectores que definen el borde de esta separación son los vectores de soporte.
+
+Finalmente como recomendación podemos decir que es importante estar actualizando constantemente las bolsas de palabras y los autocorrectores con el lenguaje propio de esta industria para poder tener textos con mayor calidad que le permita al modelo realizar una clasificación adecuada.
+
+------------------------
+
+El modelo base es el modelo que un científico de datos entrenaría y evaluaría rápidamente después de tener el primer conjunto de características (preliminares) listo para el modelado de aprendizaje automático. A través de la construcción del modelo de referencia, el científico de datos puede tener una evaluación rápida de la viabilidad de la tarea de aprendizaje automático.
+
+
+ 
 
 ## Resultados (Rendimiento del modelo)
 * Gráficos ROC/Lift, AUC, R^2, MAPE, según proceda
