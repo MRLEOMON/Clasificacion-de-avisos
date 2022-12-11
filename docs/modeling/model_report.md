@@ -51,16 +51,23 @@ En este proyecto, la fuente de datos es el sistema de gestión de mantenimiento 
 #### Componentes de la solución
 
 **1. Diccionario para corregir palabras mal escritas**: se utiliza para autocompletar y estandarizar las palabras en el campo "Descripción del aviso" y "Texto explicativo".
+
 **2. Bolsa de palabras**: se utiliza para generar las características de entrada del clasificador.
+
 **3. Clasificador**: se implementa un clasificador que utiliza las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para determinar la categoría del evento.
+
 **4. Dataset**: se utiliza para almacenar los datos extraídos de SAP y luego procesarlos.
+
 **5. Lógica de Pre-procesamiento**: se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
 
 #### Flujo de datos
 
 **1.** Los datos se extraen de SAP y se exportan a un dataset en formato excel.
+
 **2.** Se realiza un pre-procesamiento del texto en el dataset, que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+
 **3.** Se generan las características de entrada del clasificador utilizando la bolsa de palabras.
+
 **4.** El clasificador utiliza las características generadas en la etapa de pre-procesamiento como entradas para determinar la categoría del evento.
 
 ### ¿Cuál es la salida?
