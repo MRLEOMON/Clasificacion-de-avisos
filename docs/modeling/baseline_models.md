@@ -86,7 +86,7 @@ En el proyecto, se implementaron diferentes modelos de clasificación para evalu
 | Linear Support Vector Classification | TF-IDF| 93,7% |
 | Pipeline | TF-IDF | 93,4% | 
 
-MATRIZ DE DESEMPEÑO DEL MODELO CON MEJOR DESEMPEÑO
+** Matriz de desempeño del mejor modelo **
 
 De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo Linear Support Vector Classification con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy de 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos.  Esto se debe a que Linear Support Vector Classification es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
 
@@ -99,6 +99,20 @@ Vemos que con este modelo se obtuvo un excelente desempeño, a continuación las
 ![image](https://user-images.githubusercontent.com/109122368/206931948-1c961ce5-c360-4a1a-a992-4e0bf2377b58.png)
 
 Sin embargo, dado que se cuentan con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador mientras se obtienen mas datos de entrenamiento para el modelo y así para aumentar su precisión.
+
+## Comprensión del modelo
+
+### Importancia de las variables (importancia)
+
+La configuración y el ajuste del modelo de clasificación son cruciales para determinar su eficiencia y precisión en la clasificación de eventos.
+
+El diccionario utilizado para corregir palabras mal escritas en el campo Descripción del aviso y Texto explicativo es importante para mejorar la calidad del texto y permitir una mejor comprensión del mismo por parte del modelo.
+
+La bolsa de palabras utilizada para clasificar los avisos es crucial para transformar el texto en una representación numérica que el clasificador pueda utilizar para realizar su tarea.
+
+En cuanto al proceso de entrenamiento, la evaluación de distintos tipos de representaciones o características es importante para determinar cuál es la que mejor se adapta a las necesidades del modelo y ofrece una mayor precisión en la clasificación de eventos.
+
+En resumen, las variables utilizadas en el modelo de clasificación son importantes para su correcto funcionamiento y mejora de la precisión en la clasificación de eventos en el sistema de gestión de mantenimiento.
 
 ## CONCLUSIONES
 
@@ -120,14 +134,14 @@ El modelo base es el modelo que un científico de datos entrenaría y evaluaría
 
 
 
-### Gráficos ROC/Lift, AUC, R^2, MAPE, según proceda
-### Gráficos de rendimiento para los barridos de parámetros, si procede
+
+
 
 ## Comprensión del modelo
 
 * Importancia de las variables (importancia)
 
-## Comprensión del modelo
+
 
 ## Conclusión y debates para los próximos pasos
 
