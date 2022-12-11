@@ -1,4 +1,4 @@
-#Informe del modelo final
+# Informe del modelo final
 Informe que describe el modelo final que se entregará - normalmente compuesto por uno o más de los modelos construidos durante la vida del proyecto_.
 
 ## Enfoque analítico
