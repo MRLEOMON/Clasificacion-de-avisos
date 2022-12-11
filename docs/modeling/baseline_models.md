@@ -36,25 +36,35 @@ De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasi
 
 Sin embargo, dado que se cuentan con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador mientras se obtienen mas datos de entrenamiento para el modelo y así para aumentar su precisión.
 
+## CONCLUSIONES
+
+Como conclusiones se puede decir que una de las claves de éxito de este modelo está en generar adecuadamente las bolsas de palabras y hacer un correcto preprocesamiento de la información. Los autocorrectores son importantes ya que nos permiten tener las palabras correctas y de esta manera agrupar conjuntos de texto exactos ya que como se pudo apreciar, existen muchos errores ortográficos en la redacción de los textos.
+
+Otro aspecto importante es realizar los pasos correctos del diagrama de flujo para colocar las etiquetas, esto se debe a que existe un orden lógico propio para este tipo de textos y que son puntuales de la industria del Oil&Gas, si se comete un error o se hacen pasos invertidos, el resultado puede variar considerablemente.
+
+En cuanto a los modelos se puede apreciar que el clasificador Linear Support Vector Classification ***(LinearSVC)*** obtuvo el mejor resultado. Esto se debe a que las máquinas de soporte vectorial permiten encontrar la forma óptima de clasificar varias clases. La clasificación óptima se realiza maximizando el margen de separación entre las clases y los vectores que definen el borde de esta separación son los vectores de soporte.
+
+Finalmente como recomendación podemos decir que es importante estar actualizando constantemente las bolsas de palabras y los autocorrectores con el lenguaje propio de esta industria para poder tener textos con mayor calidad que le permita al modelo realizar una clasificación adecuada.
+
 ------------------------
-
-
-
-Los resultados obtenidos muestran que el mejor desempeño se obtuvo con el clasificador Linear Support Vector Classification utilizando la representación de texto BoW, con un accuracy del 93.8%. Aunque este resultado es bueno, se observa que aún hay margen de mejora, ya que se requiere un accuracy superior al 98% para considerar la implementación del clasificador.
-
-
-4.	Resultados obtenidos: en esta sección debes presentar los resultados obtenidos al evaluar el modelo de referencia en tus datos. Debes incluir información sobre las métricas utilizadas para evaluar el rendimiento del modelo, así como un análisis detallado de los resultados obtenidos y cómo se comparan con los resultados previamente reportados en la literatura.
-5.	Análisis y discusión: en esta sección debes analizar los resultados obtenidos y discutir cualquier aspecto interesante o destacable del rendimiento del modelo. También debes incluir una discusión sobre cómo se podría mejorar el modelo en el futuro y cómo se podría utilizar para resolver el problema de manera más efectiva.
-6.	Conclusiones: en esta sección debes resumir los principales hallazgos de tu informe y presentar tus conclusiones finales sobre el rendimiento del modelo de referencia. También debes discutir cómo estos resultados pueden ser útiles para otros investigadores y cómo se podrían aplicar en la práctica.
-
 
 El modelo base es el modelo que un científico de datos entrenaría y evaluaría rápidamente después de tener el primer conjunto de características (preliminares) listo para el modelado de aprendizaje automático. A través de la construcción del modelo de referencia, el científico de datos puede tener una evaluación rápida de la viabilidad de la tarea de aprendizaje automático.
 
 
 ## Enfoque analítico
-* Cuál es la definición del objetivo
-* Cuáles son las entradas (descripción)
-* ¿Qué tipo de modelo se ha construido?
+
+### Cuál es la definición del objetivo
+
+El objetivo del enfoque analítico propuesto en este proyecto es automatizar el proceso de clasificación de eventos en el sistema de gestión de mantenimiento de para una serie de estaciones de bombeo de hidrocarburos. Para lograr esto, se utilizan técnicas de procesamiento de lenguaje natural (NLP) para identificar palabras clave en los eventos registrados en el sistema y asignarles automáticamente la categoría correspondiente.
+
+
+### Cuáles son las entradas (descripción)
+
+Las entradas del modelo propuesto en este proyecto son las bolsas de palabras generadas a partir de la descripción de la falla y el texto extendido del aviso del sistema de gestión de mantenimiento SAP. Para generar las bolsas de palabras, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas.  Estas bolsas de palabras representan el vocabulario utilizado en los avisos del sistema y se utilizan como entradas para el clasificador.
+
+Una vez generadas las bolsas de palabras, se implementa un clasificador que recibe como entradas los datos de la descripción del aviso y el texto explicativo y utiliza las bolsas de palabras generadas anteriormente para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla.
+
+### ¿Qué tipo de modelo se ha construido?
 
 ## Descripción del modelo
 
