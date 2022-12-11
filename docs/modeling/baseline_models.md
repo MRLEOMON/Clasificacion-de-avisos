@@ -84,11 +84,12 @@ El flujo de datos en el modelo construido se compone de tres etapas principales:
 
 En la tercera etapa, se utiliza un clasificador para determinar la categoría a la que pertenece el evento en cuestión. Para ello, se utilizan las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para el clasificador. La salida del modelo es la categoría asignada al evento de manera automática.
 	
-#### ¿Qué aprendiz(es) se utilizó(n)?
+#### ¿Qué aprendizaje se utilizó?
 	
-	
+En el proyecto se utilizó un aprendizaje supervisado para entrenar el clasificador. Este tipo de aprendizaje requiere que se proporcionen datos etiquetados con las categorías correctas a las que pertenecen, de manera que el modelo pueda aprender a asignar categorías de manera precisa en base a los patrones encontrados en los datos de entrenamiento.  Para implementar el clasificador, se utilizó el algoritmo de machine learning Linear Support Vector Classification el cual toma un conjunto de datos de falla etiquetados asigna las categorías a nuevos avisos de falla.
 	
 #### Hiperparámetros del aprendizaje
+
 
 
 ## Resultados (Rendimiento del modelo)
