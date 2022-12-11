@@ -112,21 +112,15 @@ En cuanto al proceso de entrenamiento, la evaluación de distintos tipos de repr
 
 En resumen, las variables utilizadas en el modelo de clasificación son importantes para su correcto funcionamiento y mejora de la precisión en la clasificación de eventos en el sistema de gestión de mantenimiento.
 
-## CONCLUSIONES
+El modelo base es el modelo que un científico de datos entrenaría y evaluaría rápidamente después de tener el primer conjunto de características (preliminares) listo para el modelado de aprendizaje automático. A través de la construcción del modelo de referencia, el científico de datos puede tener una evaluación rápida de la viabilidad de la tarea de aprendizaje automático.
+
+## Conclusión y debates para los próximos pasos
 
 Como conclusiones se puede decir que una de las claves de éxito de este modelo está en generar adecuadamente las bolsas de palabras y hacer un correcto preprocesamiento de la información. Los autocorrectores son importantes ya que nos permiten tener las palabras correctas y de esta manera agrupar conjuntos de texto exactos ya que como se pudo apreciar, existen muchos errores ortográficos en la redacción de los textos.
 
 Otro aspecto importante es realizar los pasos correctos del diagrama de flujo para colocar las etiquetas, esto se debe a que existe un orden lógico propio para este tipo de textos y que son puntuales de la industria del Oil&Gas, si se comete un error o se hacen pasos invertidos, el resultado puede variar considerablemente.
 
-En cuanto a los modelos se puede apreciar que el clasificador Linear Support Vector Classification ***(LinearSVC)*** obtuvo el mejor resultado. Esto se debe a que las máquinas de soporte vectorial permiten encontrar la forma óptima de clasificar varias clases. La clasificación óptima se realiza maximizando el margen de separación entre las clases y los vectores que definen el borde de esta separación son los vectores de soporte.
-
-Finalmente como recomendación podemos decir que es importante estar actualizando constantemente las bolsas de palabras y los autocorrectores con el lenguaje propio de esta industria para poder tener textos con mayor calidad que le permita al modelo realizar una clasificación adecuada.
-
-------------------------
-
-El modelo base es el modelo que un científico de datos entrenaría y evaluaría rápidamente después de tener el primer conjunto de características (preliminares) listo para el modelado de aprendizaje automático. A través de la construcción del modelo de referencia, el científico de datos puede tener una evaluación rápida de la viabilidad de la tarea de aprendizaje automático.
-
-## Conclusión y debates para los próximos pasos
+Finalmente y como recomendación podemos decir que es importante estar actualizando constantemente las bolsas de palabras y los autocorrectores con el lenguaje propio de esta industria para poder tener textos con mayor calidad que le permita al modelo realizar una clasificación adecuada.
 
 ### Conclusión sobre la evaluación de la viabilidad de la tarea de aprendizaje automático
 
