@@ -80,17 +80,15 @@ En resumen, el modelo construido es un clasificador que utiliza técnicas de pro
 
 #### Descripción o imágenes del gráfico de flujo de datos
 
-El flujo de datos en el modelo construido se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos referentes a eventos de fallas del sistema de gestión de mantenimiento SAP PM y se exportan a un dataset en formato excel. En la segunda etapa, se lleva a cabo un pre-procesamiento del texto de este archivo, específicamente la descripción del aviso y el texto explicativo que incluye la eliminación de números y preposiciones, la conversión a minúsculas y la corrección de palabras mal escritas mediante técnicas de bolsa de palabras.
+El flujo de datos en el modelo construido se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos referentes a eventos de fallas del sistema de gestión de mantenimiento SAP PM y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto de este archivo, específicamente la descripción del aviso y el texto explicativo que incluye la eliminación de números y preposiciones, la conversión a minúsculas y la corrección de palabras mal escritas mediante técnicas de bolsa de palabras.
 
 En la tercera etapa, se utiliza un clasificador para determinar la categoría a la que pertenece el evento en cuestión. Para ello, se utilizan las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para el clasificador. La salida del modelo es la categoría asignada al evento de manera automática.
-
-En resumen, el flujo de datos en el modelo construido consiste en la extracción de datos desde el sistema de gestión de mantenimiento, seguida de un pre-procesamiento del texto para eliminar números y preposiciones, convertirlo a minúsculas y corregir palabras mal escritas. Finalmente, se utiliza un clasificador para determinar automáticamente la categoría a la que pertenece el evento.
 	
-  		* Si es AzureML, enlace a:
-    		* Experimento de entrenamiento
-    		* Flujo de trabajo de puntuación
-	#### ¿Qué aprendiz(es) se utilizó(n)?
-	#### Hiperparámetros del aprendizaje
+#### ¿Qué aprendiz(es) se utilizó(n)?
+	
+	
+	
+#### Hiperparámetros del aprendizaje
 
 
 ## Resultados (Rendimiento del modelo)
