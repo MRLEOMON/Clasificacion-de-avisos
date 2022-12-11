@@ -1,10 +1,32 @@
-# Informe del modelo final
+# INFORME DEL MODELO FINAL
+
 Informe que describe el modelo final que se entregará - normalmente compuesto por uno o más de los modelos construidos durante la vida del proyecto_.
 
-## Enfoque analítico
-* ¿Cuál es la definición del objetivo?
-* ¿Cuáles son las entradas (descripción)?
-* ¿Qué tipo de modelo se ha construido?
+## INFORME DEL MODELO DE REFERENCIA - ENFOQUE ANALÍTICO
+
+### Cuál es la definición del objetivo
+
+El enfoque analítico propuesto en este proyecto tiene como objetivo automatizar el proceso de clasificación de eventos en el sistema de gestión de mantenimiento de una serie de estaciones de bombeo de hidrocarburos. Para ello, se utilizarán técnicas de procesamiento de lenguaje natural para identificar palabras clave en los eventos registrados y asignarles automáticamente la categoría correspondiente. De esta manera, se busca simplificar y agilizar el proceso de clasificación de eventos en el sistema de gestión de mantenimiento.
+
+### Cuáles son las entradas (descripción)
+
+El modelo propuesto en este proyecto utiliza la descripción de la falla y el texto extendido del aviso del sistema de gestión de mantenimiento SAP como entradas. Para generar las bolsas de palabras, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones, la conversión a minúsculas y la corrección de palabras mal escritas. Estas bolsas de palabras representan el vocabulario utilizado en los avisos y se utilizan como entradas para el clasificador.
+
+El clasificador recibe la descripción del aviso y el texto explicativo y utiliza las bolsas de palabras generadas para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla.
+
+![image](https://user-images.githubusercontent.com/109122368/206909852-7483bfac-8ff7-4186-b4c3-eea68ab81627.png)
+
+El modelo se ejecuta de manera automática y permite clasificar los eventos de manera rápida y precisa, lo que reduce el tiempo y los costos asociados al proceso manual actual.
+
+### ¿Qué tipo de modelo se ha construido?
+
+Este proyecto propone un clasificador que utiliza técnicas de procesamiento de lenguaje natural (NLP) para automatizar la clasificación de eventos en el sistema de gestión de mantenimiento. El modelo consta de tres etapas: extracción de datos, pre-procesamiento y clasificación.
+
+En la primera etapa, se extraen los datos de SAP y se convierten en un dataset en formato excel. Luego, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones, la conversión a minúsculas y la corrección de palabras mal escritas utilizando bolsas de palabras.
+
+Finalmente, en la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras como entradas para determinar la categoría de un evento: falla, condición del equipo o sin falla. La salida del modelo es la categoría asignada automáticamente al evento.
+
+En resumen, el modelo es un clasificador que utiliza técnicas de NLP y bolsas de palabras para determinar automáticamente la categoría de un evento en el sistema de gestión de mantenimiento.
 
 ## Descripción de la solución
 * Arquitectura simple de la solución (fuentes de datos, componentes de la solución, flujo de datos)
