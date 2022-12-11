@@ -6,8 +6,13 @@ El problema que se trata de resolver, se refiere a que se presenta un alto núme
 
 ## DESCRIPCIÓN DEL MODELO DE REFERENCIA
 
-2.	Descripción del modelo de referencia: en esta sección debes dar una descripción detallada del modelo de referencia que has seleccionado. Esto puede incluir información sobre cómo funciona el modelo, sus principales componentes y características, y cómo se ha entrenado y evaluado previamente.
-3.	
+El modelo de referencia propuesto en este proyecto se basa en el uso de técnicas de procesamiento de lenguaje natural (NLP) para clasificar automáticamente los eventos registrados en el sistema de gestión de mantenimiento de una estación de bombeo de petróleo.
+
+El modelo se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos de SAP y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
+
+Finalmente, en la etapa de clasificación, se implementa un clasificador que utiliza las bolsas de palabras para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla. El modelo se ejecuta de manera automática y permite clasificar los eventos de manera rápida y precisa, lo que reduce el tiempo y los costos asociados al proceso manual actual.
+
+
 4.	Resultados obtenidos: en esta sección debes presentar los resultados obtenidos al evaluar el modelo de referencia en tus datos. Debes incluir información sobre las métricas utilizadas para evaluar el rendimiento del modelo, así como un análisis detallado de los resultados obtenidos y cómo se comparan con los resultados previamente reportados en la literatura.
 5.	Análisis y discusión: en esta sección debes analizar los resultados obtenidos y discutir cualquier aspecto interesante o destacable del rendimiento del modelo. También debes incluir una discusión sobre cómo se podría mejorar el modelo en el futuro y cómo se podría utilizar para resolver el problema de manera más efectiva.
 6.	Conclusiones: en esta sección debes resumir los principales hallazgos de tu informe y presentar tus conclusiones finales sobre el rendimiento del modelo de referencia. También debes discutir cómo estos resultados pueden ser útiles para otros investigadores y cómo se podrían aplicar en la práctica.
