@@ -20,6 +20,18 @@ El modelo se ejecuta de manera automática y permite clasificar los eventos de m
 
 En el proyecto, se implementaron diferentes modelos de clasificación para evaluar su eficacia en el proceso de clasificación de eventos en el sistema de gestión de mantenimiento. Estos modelos incluyen Multinomial Naive Bayes, Logistic Regression classifier, Support Vector Classification, Linear Support Vector Classification y Pipelines.
 
+| CLASIFICADOR | REPRESENTACIÓN DE TEXTO | ACCURACY |
+| --- | --- | --- | 
+| Multinomial Naive Bayes | BoW | 87,4% |
+| Multinomial Naive Bayes | TF-IDF| 83,0% |
+| Logistic Regression classifier | BoW | 93,5% |
+| Logistic Regression classifier | TF-IDF| 93,2% |
+| Support Vector Classification | BoW | 82,5% |
+| Support Vector Classification | TF-IDF|82,5% |
+| ***Linear Support Vector Classification*** | ***BoW*** | ***93,8%*** |
+| Linear Support Vector Classification | TF-IDF| 93,7% |
+| Pipeline | TF-IDF | 93,4% | 
+
 De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo Linear Support Vector Classification con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy de 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos.  Esto se debe a que Linear Support Vector Classification es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
 
 Sin embargo, dado que se cuentan con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador mientras se obtienen mas datos de entrenamiento para el modelo y así para aumentar su precisión.
