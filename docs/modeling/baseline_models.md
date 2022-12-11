@@ -12,12 +12,15 @@ El problema que se trata de resolver, se refiere a que se presenta un alto núme
 
 El objetivo del enfoque analítico propuesto en este proyecto es automatizar el proceso de clasificación de eventos en el sistema de gestión de mantenimiento de para una serie de estaciones de bombeo de hidrocarburos. Para lograr esto, se utilizan técnicas de procesamiento de lenguaje natural (NLP) para identificar palabras clave en los eventos registrados en el sistema y asignarles automáticamente la categoría correspondiente.
 
-
 ### Cuáles son las entradas (descripción)
 
 Las entradas del modelo propuesto en este proyecto son las bolsas de palabras generadas a partir de la descripción de la falla y el texto extendido del aviso del sistema de gestión de mantenimiento SAP. Para generar las bolsas de palabras, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas.  Estas bolsas de palabras representan el vocabulario utilizado en los avisos del sistema y se utilizan como entradas para el clasificador.
 
 Una vez generadas las bolsas de palabras, se implementa un clasificador que recibe como entradas los datos de la descripción del aviso y el texto explicativo y utiliza las bolsas de palabras generadas anteriormente para determinar si el evento corresponde a una falla, una condición del equipo o si no se trata de una falla.
+
+![image](https://user-images.githubusercontent.com/109122368/206909852-7483bfac-8ff7-4186-b4c3-eea68ab81627.png)
+
+El modelo se ejecuta de manera automática y permite clasificar los eventos de manera rápida y precisa, lo que reduce el tiempo y los costos asociados al proceso manual actual.
 
 ### ¿Qué tipo de modelo se ha construido?
 
@@ -51,8 +54,6 @@ a. Diccionario para corregir las palabras mal escritas del campo Descripción de
 
 b. Bolsa de palabras para clasificar los avisos: Está compuesta por 180 palabras o frases clave que realizan la clasificación que se muestra a continuación:
 
-![image](https://user-images.githubusercontent.com/109122368/206922858-b2dbbfa6-4766-4783-b554-1c0938bf917d.png)
-
 | clasificación | proceso de gestión |
 | --- | --- |
 | No aplica | No aplica |
@@ -71,7 +72,7 @@ Las variables que le pasaremos a nuestros clasificadores para entrenar y validar
 
 --------------------------
 
-El modelo de referencia propuesto en este proyecto se basa en el uso de técnicas de procesamiento de lenguaje natural (NLP) para clasificar automáticamente los eventos registrados en el sistema de gestión de mantenimiento de una estación de bombeo de petróleo.
+
 
 El modelo se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos de SAP y se exportan a un dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento del texto que incluye la eliminación de números y preposiciones mediante expresiones regulares, la conversión del texto a minúsculas y la corrección de palabras mal escritas utilizando técnicas de bolsa de palabras.
 
