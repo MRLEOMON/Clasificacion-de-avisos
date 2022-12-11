@@ -1,6 +1,6 @@
 # ENTORNO DE DESPLIEGUE
 
-El documento de despliegue es una parte importante del proyecto de ciencia de datos ya que describe cómo se implementará el modelo de ciencia de datos en producción.  Para abordar este tema se tienen en cuenta los siguientes aspectos:
+El documento de despliegue es una parte importante de este proyecto ya que describe cómo se implementará el modelo de ciencia de datos en producción.  Para abordar este tema se tienen en cuenta los siguientes aspectos:
 
 ## 1. ENTORNO DE DESPLIEGUE
 
@@ -32,6 +32,26 @@ Los datos se ingresarán al servidor de manera manual a través de un archivo en
 ### 1.3 GESTIÓN DE DATOS USADOS POR EL MODELO
 
 Los datos se ingresarán al servidor de manera manual a través de un archivo en formato Excel que se pondrá en la carpeta 'data' del proyecto. Se agregarán datos  semanalmente con información descargada de el ERP SAP y estos datos serán los que utilizará el modelo para realizar la clasificación de las fallas.
+
+## 2. IMPLEMENTACIÓN DEL MODELO EN EL ENTORNO DE DESPLIEGUE
+
+Para implementar este modelo en el entorno de despliegue, sigue los siguientes pasos:
+
+a. Clona el repositorio con el comando:
+$ git clone https://github.com/MRLEOMON/Clasificacion_Avisos
+
+b. Instala los paquetes necesarios con el comando:
+$ poetry install
+
+c. Ejecuta el script de entrenamiento y evaluación del modelo con el comando:
+$ python train.py
+
+
+c. Ejecuta el script de clasificación con el comando:
+$ python clasify.py <input_file> <output_file>
+
+donde `<input_file>` es el archivo de entrada con los datos a clasificar y `<output_file>` es el archivo de salida donde se guardarán la clasificación de fallas predicciones del modelo.
+
 
 --
 
