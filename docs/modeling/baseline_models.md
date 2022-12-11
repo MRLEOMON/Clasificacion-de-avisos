@@ -98,7 +98,14 @@ b. Bolsa de palabras para clasificar los avisos: Está compuesta por 180 palabra
 
 ![image](https://user-images.githubusercontent.com/109122368/206922858-b2dbbfa6-4766-4783-b554-1c0938bf917d.png)
 
-gfsd
+| clasificación | proceso de gestión |
+| --- | --- |
+| No aplica | No aplica |
+| Condición | Inteligencia artificial |
+| Falla | Seguridad de procesos |
+| Falla | Eliminación de defectos |
+
+
 
 ## Resultados (Rendimiento del modelo)
 * Gráficos ROC/Lift, AUC, R^2, MAPE, según proceda
