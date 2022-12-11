@@ -18,7 +18,9 @@ El modelo se ejecuta de manera automática y permite clasificar los eventos de m
 
 ## RESULTADOS OBTENIDOS
 
+En el proyecto, se implementaron diferentes modelos de clasificación para evaluar su eficacia en el proceso de clasificación de eventos en el sistema de gestión de mantenimiento. Estos modelos incluyen Multinomial Naive Bayes, Logistic Regression classifier, Support Vector Classification, Linear Support Vector Classification y Pipelines.
 
+Los resultados obtenidos muestran que el mejor desempeño se obtuvo con el clasificador Linear Support Vector Classification utilizando la representación de texto BoW, con un accuracy del 93.8%. Aunque este resultado es bueno, se observa que aún hay margen de mejora, ya que se requiere un accuracy superior al 98% para considerar la implementación del clasificador.
 
 
 4.	Resultados obtenidos: en esta sección debes presentar los resultados obtenidos al evaluar el modelo de referencia en tus datos. Debes incluir información sobre las métricas utilizadas para evaluar el rendimiento del modelo, así como un análisis detallado de los resultados obtenidos y cómo se comparan con los resultados previamente reportados en la literatura.
