@@ -105,7 +105,14 @@ b. Bolsa de palabras para clasificar los avisos: Está compuesta por 180 palabra
 | Falla | Seguridad de procesos |
 | Falla | Eliminación de defectos |
 
+c. Para el proceso de entrenamiento, vamos a evaluar distintos tipos de representaciones o características:
 
+1. Se utilizará esta matriz obtenida con la **bolsa** de palabras bow como entrada del clasificador.
+2. Usaremos la representación del texto obtenida con **TF-IDF**.
+
+En todos los casos, se utilizará validación cruzada (**hold out cross-validation**) para validar el modelo, por lo que dividiremos el conjunto de datos en **70%** para entrenamiento y **30%** para prueba. Se usará un parámetro ``random_state=0`` para inicializar una semilla para asegurarnos que todos obtengamos los mismos resultados. 
+
+Las variables que le pasaremos a nuestros clasificadores para entrenar y validar los modelos son las siguientes: **X_train**, **X_test**, **y_train**, **y_test** 
 
 ## Resultados (Rendimiento del modelo)
 * Gráficos ROC/Lift, AUC, R^2, MAPE, según proceda
