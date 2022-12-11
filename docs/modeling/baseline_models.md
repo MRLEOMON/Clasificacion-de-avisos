@@ -90,6 +90,13 @@ En el proyecto se utilizó un aprendizaje supervisado para entrenar el clasifica
 	
 #### Hiperparámetros del aprendizaje
 
+A continuación se muestran los detalles referentes a la configuración y el ajuste del modelo de clasificación:
+
+a. Diccionario para corregir las palabras mal escritas del campo Descripción del aviso y Texto explicativo: compuesta por 5.538 y 248 palabras respectivamente.  Se encargan de realizar el autocompletado (ej. shut por shutdown) y estandarizar las palabras (ej. shutoff por shutdown).
+b. Bolsa de palabras para clasificar los avisos: Está compuesta por 180 palabras o frases clave que indican si se clasifica como se muestra a continuación:
+
+![image](https://user-images.githubusercontent.com/109122368/206922858-b2dbbfa6-4766-4783-b554-1c0938bf917d.png)
+
 
 
 ## Resultados (Rendimiento del modelo)
