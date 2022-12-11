@@ -1,4 +1,4 @@
-# ENTORNO DE DESPLIEGUE:
+# ENTORNO DE DESPLIEGUE
 
 El documento de despliegue es una parte importante del proyecto de ciencia de datos ya que describe cómo se implementará el modelo de ciencia de datos en producción.  Para abordar este tema se tienen en cuenta los siguientes aspectos:
 
