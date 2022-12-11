@@ -75,11 +75,26 @@ En este proyecto, la fuente de datos es el sistema de gestión de mantenimiento 
 La salida del modelo es la categoría asignada automáticamente al evento.
 
 ## Datos
-* Fuente
-* Esquema de datos
-* Muestreo
-* Selección (fechas, segmentos)
-* Estadísticas (recuentos)
+
+### Fuente
+
+Los datos provienen del CMMS **SAP** donde cada tipo de evento ocurrido en las diferentes estaciones de petróleo es registrado, almacenando datos puntales que pueden ser de interes para realizar muchos tipos de análisis
+
+### Esquema de datos
+
+Esta base de datos contiene los avisos de falla de equipos de la semana inmediatamente anterior de las estaciones de bombeo de hidrocarburos objeto del contrato de servicio integral de mantenimiento de estaciones de los sistemas de transporte y logística de hidrocarburos.  A continuación se muestra como los datos se encuentran relacionados en SAP
+
+![image](https://user-images.githubusercontent.com/109122368/206936608-32de5aae-99ae-4fa2-bed2-9e2b4fc4e247.png)
+
+
+
+
+### Muestreo
+
+### Selección (fechas, segmentos)
+
+### Estadísticas (recuentos)
+
 
 ## Características
 * Lista de características brutas y derivadas 
