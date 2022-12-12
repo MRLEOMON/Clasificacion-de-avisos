@@ -3,7 +3,7 @@
 
 ## Proyecto del módulo - Clasificacion de Avisos de Falla
 
-### Entregable 3: 
+### Entregable 3: Proyecto final
 ### Entregable 2: Preprocesamiento, EDA y Extraccion de Caracterisiticas (4-dic-2022)
 ### Entregable 1: Business Understanding and Data Acquisition (27-nov-2022)
 ---------------------------------------------------------
