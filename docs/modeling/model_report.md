@@ -113,13 +113,67 @@ La clasificación de la importancia es una tarea subjetiva que depende de divers
 En general, la clasificación de la importancia se podría realizar teniendo en cuenta el equipo que está presentando la falla o avería, los equipos ya se encuentran clasificados en SAP  mediante una escala de valores que van desde "crítico por disponibilidad", "Esencial", "No crítico" y "Crítico por seguridad" dependiendo de como se encuentra clasificado de equipo, así es el nivel de impacto del evento en cuestión. Sin embargo, esta clasificación puede variar según el contexto operacional y las necesidades específicas del cliente.
 
 ## Algoritmo
-* Descripción o imágenes del gráfico de flujo de datos
-  ## Si es AzureML, enlace a:
-    * Experimento de entrenamiento
-    * Flujo de trabajo de puntuación
-* ¿Qué aprendiz(es) se utilizó(n)?
-* Hiperparámetros del aprendiz
+
+#### Descripción o imágenes del gráfico de flujo de datos
+
+El flujo de datos en el modelo construido se compone de tres etapas principales: extracción de datos, pre-procesamiento y clasificación. En la primera etapa, se extraen los datos referentes a eventos de fallas del sistema de gestión de mantenimiento SAP PM y se exportan a un archivo de dataset en formato excel. En la segunda etapa, se realiza un pre-procesamiento de los datos, enfocándose en la descripción del aviso y el texto explicativo. Esto incluye la eliminación de números y preposiciones, la conversión a minúsculas y la corrección de palabras mal escritas mediante el uso de técnicas de bolsa de palabras.
+
+Posteriormente, en la tercera etapa, se utiliza un clasificador para determinar la categoría a la que pertenece cada evento de falla. Para ello, se utilizan las bolsas de palabras generadas en la etapa de pre-procesamiento como entradas para el clasificador. La salida del modelo es la categoría asignada al evento de manera automática.
+	
+#### ¿Qué aprendizaje se utilizó?
+	
+En el proyecto se utilizó un aprendizaje supervisado para entrenar el clasificador. En este tipo de aprendizaje, se proporcionan datos etiquetados con las categorías correctas a las que pertenecen, de manera que el modelo pueda aprender a asignar categorías de manera precisa en base a los patrones encontrados en los datos de entrenamiento. Para implementar el clasificador, se utilizó el algoritmo de machine learning llamado "Linear Support Vector Classification". Este algoritmo toma un conjunto de datos de fallas etiquetados y asigna categorías a nuevos avisos de fallas en base a lo que ha aprendido de los datos de entrenamiento.
+	
+#### Hiperparámetros del aprendizaje
+
+A continuación se muestran los detalles referentes a la configuración y el ajuste del modelo de clasificación:
+
+a. Diccionario para corregir las palabras mal escritas del campo Descripción del aviso y Texto explicativo: compuesta por 5.538 y 248 palabras respectivamente.  Se encargan de realizar el autocompletado (ej. shut por shutdown) y estandarizar las palabras (ej. shutoff por shutdown).
+
+b. Bolsa de palabras para clasificar los avisos: Está compuesta por 180 palabras o frases clave que realizan la clasificación que se muestra a continuación:
+
+| clasificación | proceso de gestión |
+| --- | --- |
+| No aplica | No aplica |
+| Condición | Inteligencia artificial |
+| Falla | Seguridad de procesos |
+| Falla | Eliminación de defectos |
+
+c. Para el proceso de entrenamiento, vamos a evaluar distintos tipos de representaciones o características:
+
+1. Se utilizará esta matriz obtenida con la **bolsa** de palabras bow como entrada del clasificador.
+2. Usaremos la representación del texto obtenida con **TF-IDF**.
+
+En todos los casos, se utilizará validación cruzada (**hold out cross-validation**) para validar el modelo, por lo que dividiremos el conjunto de datos en **70%** para entrenamiento y **30%** para prueba. Se usará un parámetro ``random_state=0`` para inicializar una semilla para asegurarnos que todos obtengamos los mismos resultados. 
+
+Las variables que le pasaremos a nuestros clasificadores para entrenar y validar los modelos son las siguientes: **X_train**, **X_test**, **y_train**, **y_test**
 
 ## Resultados
-* Gráficos ROC/Lift, AUC, R^2, MAPE, según proceda
-* Gráficos de rendimiento para los barridos de parámetros, si procede
+
+En el proyecto, se implementaron diferentes modelos de clasificación para evaluar su eficacia en el proceso de clasificación de eventos en el sistema de gestión de mantenimiento. Estos modelos incluyen Multinomial Naive Bayes, Logistic Regression classifier, Support Vector Classification, Linear Support Vector Classification y Pipelines.
+
+| CLASIFICADOR | REPRESENTACIÓN DE TEXTO | ACCURACY |
+| --- | --- | --- | 
+| Multinomial Naive Bayes | BoW | 87,4% |
+| Multinomial Naive Bayes | TF-IDF| 83,0% |
+| Logistic Regression classifier | BoW | 93,5% |
+| Logistic Regression classifier | TF-IDF| 93,2% |
+| Support Vector Classification | BoW | 82,5% |
+| Support Vector Classification | TF-IDF|82,5% |
+| ***Linear Support Vector Classification*** | ***BoW*** | ***93,8%*** |
+| Linear Support Vector Classification | TF-IDF| 93,7% |
+| Pipeline | TF-IDF | 93,4% | 
+
+**Matriz de desempeño del mejor modelo**
+
+De acuerdo a los resultados obtenidos al implementar diferentes modelos de clasificación, se concluyó que el modelo "Linear Support Vector Classification" con la representación de texto BoW ofreció el mejor desempeño, logrando un accuracy del 93.8%. Esto significa que el modelo es capaz de predecir correctamente la categoría a la que pertenece un evento en el 93.8% de los casos. Este resultado positivo se debe a que "Linear Support Vector Classification" es un clasificador lineal que se basa en la maximización del margen entre las categorías, lo que le permite realizar una clasificación más precisa de los eventos en el dataset.
+
+![image](https://user-images.githubusercontent.com/109122368/206931851-bf2e9584-7d74-43ba-a731-ca3b45c1f360.png)
+
+![image](https://user-images.githubusercontent.com/109122368/206931866-4a6ae93a-be72-435a-a925-3f07df12ac56.png)
+
+Vemos que con este modelo se obtuvo un excelente desempeño, a continuación las métricas de desempeño:
+
+![image](https://user-images.githubusercontent.com/109122368/206931948-1c961ce5-c360-4a1a-a992-4e0bf2377b58.png)
+
+Sin embargo, dado que se cuenta con un número limitado de datos, el accuracy del modelo es inferior al 98%, lo que indica que todavía hay margen de mejora en su capacidad de clasificación. Por lo tanto, se propone continuar trabajando con la implementación del clasificador para mejorar su precisión, obteniendo más datos de entrenamiento para el modelo. Esto permitirá aumentar la calidad de las predicciones del clasificador y su capacidad de clasificación de eventos de falla.
