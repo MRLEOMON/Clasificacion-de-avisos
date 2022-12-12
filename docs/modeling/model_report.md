@@ -99,8 +99,18 @@ Los datos utilizados para entrenar y evaluar el modelo se refieren a los eventos
 El total de entradas des de 29.970.  Como los campos **Descripción** y **Texto explicativo** son de tipo Objetct (Texto), no es posible obtener datos estadísticos descriptivos. 
 
 ## Características
-* Lista de características brutas y derivadas 
-* Clasificación de la importancia.
+
+### Lista de características brutas y derivadas
+
+**La lista de características brutas** podría incluir las palabras extraídas del campo Descripción del aviso y Texto explicativo después de aplicar la corrección de palabras mal escritas.
+
+**La lista de características derivadas** podría incluir las bolsas de palabras generadas en la etapa de pre-procesamiento, así como la representación del texto obtenida mediante TF-IDF. Estas características se utilizarán como entradas para el clasificador, y se basan en las palabras extraídas del texto original.
+ 
+### Clasificación de la importancia.
+
+La clasificación de la importancia es una tarea subjetiva que depende de diversos factores, como la relevancia del evento para la operación del equipo o sistema, su impacto en la disponibilidad o en el rendimiento, entre otros.
+
+En general, la clasificación de la importancia se podría realizar teniendo en cuenta el equipo que está presentando la falla o avería, los equipos ya se encuentran clasificados en SAP  mediante una escala de valores que van desde "crítico por disponibilidad", "Esencial", "No crítico" y "Crítico por seguridad" dependiendo de como se encuentra clasificado de equipo, así es el nivel de impacto del evento en cuestión. Sin embargo, esta clasificación puede variar según el contexto operacional y las necesidades específicas del cliente.
 
 ## Algoritmo
 * Descripción o imágenes del gráfico de flujo de datos
