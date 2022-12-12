@@ -84,14 +84,15 @@ Los datos provienen del CMMS **SAP** donde cada tipo de evento ocurrido en las d
 
 Esta base de datos contiene los avisos de falla de equipos de la semana inmediatamente anterior de las estaciones de bombeo de hidrocarburos objeto del contrato de servicio integral de mantenimiento de estaciones de los sistemas de transporte y logística de hidrocarburos.  A continuación se muestra como los datos se encuentran relacionados en SAP
 
-![image](https://user-images.githubusercontent.com/109122368/206936608-32de5aae-99ae-4fa2-bed2-9e2b4fc4e247.png)
-
-
-
+![image](https://user-images.githubusercontent.com/109122368/206936663-41fd6781-9b11-40b1-a5ff-9a5c4ed78d4a.png)
 
 ### Muestreo
 
+para validar el modelo, se dividió el conjunto de datos en **70%** para entrenamiento y **30%** para prueba.
+
 ### Selección (fechas, segmentos)
+
+Los datos utilizados para entrenar y evaluar el modelo se refieren a los eventos de falla (avisos Y2) de 24 estaciones de bombeo del 01-ene-2018 al 20-sep-2022.
 
 ### Estadísticas (recuentos)
 
