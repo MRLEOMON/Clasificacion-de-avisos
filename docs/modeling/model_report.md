@@ -88,7 +88,7 @@ Esta base de datos contiene los avisos de falla de equipos de la semana inmediat
 
 ### Muestreo
 
-para validar el modelo, se dividió el conjunto de datos en **70%** para entrenamiento y **30%** para prueba.
+Para validar el modelo, se dividió el conjunto de datos en **70%** para entrenamiento y **30%** para prueba.
 
 ### Selección (fechas, segmentos)
 
