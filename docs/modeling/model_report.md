@@ -96,6 +96,7 @@ Los datos utilizados para entrenar y evaluar el modelo se refieren a los eventos
 
 ### Estadísticas (recuentos)
 
+El total de entradas des de 29.970.  Como los campos **Descripción** y **Texto explicativo** son de tipo Objetct (Texto), no es posible obtener datos estadísticos descriptivos. 
 
 ## Características
 * Lista de características brutas y derivadas 
